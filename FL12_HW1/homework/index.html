@@ -29,10 +29,10 @@
             </header>
             <section>
               <p>
-                Lorem ipsum dolor sit amet, <a>test link</a> adipiscing elit.
-                Nullam dignissim convallis est. Quisque aliquam.
+                Lorem ipsum dolor sit amet, <a href="#">test link</a> adipiscing
+                elit. Nullam dignissim convallis est. Quisque aliquam.
                 <em>This is emphasized.</em> Donec faucibus. Nunc iaculis
-                suscipit dui. 4 <sup>4</sup> = 256. Water is
+                suscipit dui. 4 <sup>4</sup> = 256. Phosphoric acid is
                 H<sub>3</sub>PO<sub>4</sub>. Nam sit amet sem. Aliquam libero
                 nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
                 <cite>Time Magazine</cite> (That’s a citation).
@@ -52,7 +52,7 @@
                 tellus. Praesent mattis, massa quis luctus fermentum. To copy a
                 file type <code>COPY</code> <i>filename</i>.
                 <s>The meeting began at 7pm</s>
-                <mark>Let’s make that 6.</mark> This <del>text</del> has been
+                <mark>Let’s make that 6pm.</mark> This <del>text</del> has been
                 struck.
               </p>
               <hr />
@@ -67,8 +67,8 @@
               <h4>Heading 4</h4>
               <h5>Heading 5</h5>
               <h6>Heading 6</h6>
-              <hr />
             </section>
+            <hr />
             <section>
               <h2>Text formats</h2>
               <h3>Article</h3>
@@ -79,21 +79,20 @@
               <br />
               <h3>Preformatted Text</h3>
               <pre>
-  Text in a <b>pre</b> element
-  is displayed in a fixed-width
-  font, and it preserves
-  both           <b>spaces</b> and
-  <b>line breaks</b>
-
-
+  
+Text in a <b>pre</b> element
+is displayed in a fixed-width
+font, and it preserves
+both      <b>spaces</b> and
+<b>line breaks</b>
               </pre>
               <h3>This is code</h3>
               <pre><code>
-  .flex {
-    display: flex;
-    justify-content: justify;
-    aliign-items: center;
-  }
+.flex {
+  display: flex;
+  justify-content: justify;
+  aliign-items: center;
+}
 
                 </code></pre>
               <h2>Unordered Wish List</h2>
@@ -143,6 +142,81 @@
                 <option value="CSS">CSS</option>
               </select>
             </section>
+            <hr />
+            <hr />
+            <section>
+              <h2>Table</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Skill</th>
+                    <th>Training</th>
+                    <th>City</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>JAVA</td>
+                    <td>JAVA development training</td>
+                    <td>Lviv</td>
+                  </tr>
+                  <tr>
+                    <td>JAVASCRIPT</td>
+                    <td>FRONT-END development</td>
+                    <td>Kharkiv</td>
+                  </tr>
+                  <tr>
+                    <td>IOS</td>
+                    <td>IOS winter 2019</td>
+                    <td>Kyiv</td>
+                  </tr>
+                  <tr>
+                    <td>DEVOPS</td>
+                    <td>DEVOPS spring 2020</td>
+                    <td>Dnipro</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2>Blockquotes</h2>
+              <p>
+                Let’s keep it simple. Italics are good to help set it off from
+                the body text. Be sure to style the citation.
+              </p>
+              <blockquote>
+                "So if you want to go fast, if you want to get done quickly, if
+                you want your code to be easy to write, make it easy to read."
+                <br />
+                <a href="#">Robert C. Martin (Uncle Bob)</a>
+              </blockquote>
+            </section>
+            <hr />
+            <section>
+              <form action="">
+                <fieldset>
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" />
+                </fieldset>
+                <fieldset>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" />
+                </fieldset>
+                <fieldset>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" />
+                </fieldset>
+                <fieldset>
+                  <textarea cols="23" rows="4"></textarea>
+                </fieldset>
+                <fieldset>
+                  <button type="submit" value="submit">
+                    Submit
+                  </button>
+                </fieldset>
+              </form>
+            </section>
+            <footer>
+              <p>&copy Copyright Epam Systems</p>
+            </footer>
           </div>
         </div>
       </div>
