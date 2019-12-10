@@ -28,6 +28,7 @@
 
 .flex-2-col {
   display: flex;
+  align-items: center;
 }
 
 .tm-section-title {
