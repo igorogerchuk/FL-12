@@ -36,5 +36,95 @@
 
 .tm-team-description-container p {
   text-align: start;
-  text-indent: 1.5em;
+}
+
+.box-bg:hover {
+  background-color: lightgrey;
+  color: lightskyblue;
+}
+
+.heading h2 {
+  color: lightskyblue;
+  text-align: center;
+}
+
+.heading ol {
+  list-style: lower-alpha;
+}
+
+.heading li:hover::before {
+  content: ">";
+  font-weight: bold;
+}
+
+.heading li:first-child::after,
+.heading li:nth-child(3)::after {
+  content: "New";
+  font-weight: bold;
+  font-size: x-small;
+  color: red;
+  vertical-align: super;
+}
+
+.blocks .tm-section-title {
+  text-align: left;
+}
+
+.blocks .tm-section-description:last-child {
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  font-style: italic;
+}
+
+.box-work {
+  padding: 8px;
+}
+
+.box-work p {
+  font-style: italic;
+}
+
+.box-work p::first-letter {
+  font-weight: bold;
+}
+
+.box-work:nth-child(2n-1) {
+  background-color: lightskyblue;
+  color: #fff;
+}
+
+.tm-section-description {
+  line-height: 30px;
+  text-indent: 25px;
+}
+
+#contact .tm-section-title {
+  text-align: left;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid lightskyblue;
+}
+
+.form-control:focus {
+  background-color: lightskyblue;
+}
+
+#contact_message {
+  border: 1px solid lightskyblue;
+  background: url(../img/email-icon.png) right 10px bottom 10px no-repeat;
+  background-size: 25px;
+}
+
+#contact_message:focus {
+  background-color: #fff;
+}
+
+.submit-btn {
+  border: 1px solid lightskyblue;
+  background-color: #fff;
+  color: lightskyblue;
+  float: right;
+  padding: 15px 20px;
 }
