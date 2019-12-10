@@ -1,5 +1,40 @@
-/*
+.tm-nav-item-link:hover {
+  background-color: lightskyblue;
+  color: #fff;
+}
 
-write your code here
+.tm-banner {
+  background: linear-gradient(to right, lightskyblue, burlywood);
+}
 
-*/
+.tm-banner-inner {
+  background-color: #fff;
+}
+
+.tm-banner-text {
+  animation: 4s slidein;
+  text-shadow: 5px 5px 2px rgba(51, 51, 51, 0.75);
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(200px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.flex-2-col {
+  display: flex;
+}
+
+.tm-section-title {
+  text-align: center;
+}
+
+.tm-team-description-container p {
+  text-align: start;
+  text-indent: 1.5em;
+}
