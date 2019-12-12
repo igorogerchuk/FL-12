@@ -1,1 +1,85 @@
 // Write your styles here
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+%link-style {
+  font-family: $font2;
+  color: $link-color;
+  font-weight: bold;
+}
+
+.header {
+  background: no-repeat url(../img/m-h-day.jpg) center center;
+  background-size: cover;
+  max-width: $width;
+  margin: 0 auto;
+  color: $text-color;
+  border-bottom-right-radius: 740px 280px;
+
+  &-wrap {
+    max-width: $width * 0.8;
+    margin: 0 auto;
+  }
+
+  &_heading {
+    max-width: $width * 0.25;
+    font-size: 48px;
+    font-family: $font1;
+    font-weight: bold;
+    line-height: 48px;
+    margin-bottom: 60px;
+  }
+
+  &_text {
+    max-width: $width * 0.35;
+    font-size: 14px;
+    font-family: $font1;
+    margin-bottom: 60px;
+    white-space: pre-line;
+  }
+
+  &_button {
+    padding: 8px 35px;
+    @extend %link-style;
+    background-color: $btn-bg-color;
+    border: none;
+    border-radius: 3px;
+    margin-right: 180px;
+    margin-bottom: 180px;
+  }
+
+  a {
+    @extend %link-style;
+    font-size: 14px;
+  }
+}
+
+.landing-logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 90px;
+  img {
+    width: 44px;
+    margin-right: 15px;
+  }
+  p {
+    font-size: 18px;
+    font-family: $font2;
+    font-weight: bold;
+  }
+  span {
+    display: block;
+    font-size: 8px;
+  }
+}
