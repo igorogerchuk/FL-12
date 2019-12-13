@@ -17,6 +17,15 @@ html {
   font-weight: bold;
 }
 
+%button-style {
+  padding: 8px 35px;
+  @extend %link-style;
+  background-color: $btn-bg-color;
+  border: none;
+  border-radius: 3px;
+  margin-right: 180px;
+}
+
 .header {
   background: no-repeat url(../img/m-h-day.jpg) center center;
   background-size: cover;
@@ -48,12 +57,7 @@ html {
   }
 
   &_button {
-    padding: 8px 35px;
-    @extend %link-style;
-    background-color: $btn-bg-color;
-    border: none;
-    border-radius: 3px;
-    margin-right: 180px;
+    @extend %button-style;
     margin-bottom: 180px;
   }
 
@@ -81,5 +85,108 @@ html {
   span {
     display: block;
     font-size: 8px;
+  }
+}
+
+.section {
+  text-align: center;
+  padding-top: 40px;
+
+  &_text {
+    font-family: $font1;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: $text-color;
+  }
+
+  &_card_wrap {
+    width: $width * 0.58;
+    margin: 0 auto;
+  }
+
+  &_card {
+    padding: 14px;
+    border-radius: 5px;
+    background-color: $text-color;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+
+    &_img {
+      border-radius: 5px;
+      min-height: 250px;
+      width: auto;
+    }
+
+    &_right_container {
+      width: $width * 0.25;
+      padding-top: 60px;
+      margin: 0 auto;
+      color: $link-color;
+      margin-bottom: 20px;
+    }
+
+    &_heading {
+      font-family: $font2;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    &_text {
+      font-family: $font1;
+      font-size: 12px;
+      text-align: justify;
+      margin-bottom: 30px;
+    }
+  }
+
+  &_link {
+    color: $link-color;
+    font-size: 12px;
+  }
+
+  &_banner {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to right, $btn-bg-color, #2e5cd3);
+    padding: 25px 0;
+
+    &_heading {
+      font-family: $font1;
+      font-size: 20px;
+      font-weight: bold;
+      color: $text-color;
+      margin-bottom: 16px;
+    }
+
+    &_text {
+      font-family: $font1;
+      font-size: 10px;
+      color: $link-color;
+      text-align: left;
+    }
+
+    &_button {
+      @extend %button-style;
+    }
+  }
+}
+
+.footer {
+  background-color: $text-color;
+  max-width: $width;
+  margin: 0 auto;
+
+  &-wrap {
+    width: $width * 0.8;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

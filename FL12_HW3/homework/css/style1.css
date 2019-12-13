@@ -8,17 +8,24 @@ html {
   margin: 0;
   padding: 0; }
 
-.header_button, .header a {
+.header_button, .section_banner_button, .header a {
   font-family: "Hind", sans-serif;
   color: white;
   font-weight: bold; }
+
+.header_button, .section_banner_button {
+  padding: 8px 35px;
+  background-color: #699900;
+  border: none;
+  border-radius: 3px;
+  margin-right: 180px; }
 
 .header {
   background: no-repeat url(../img/m-h-day.jpg) center center;
   background-size: cover;
   max-width: 1920px;
   margin: 0 auto;
-  color: #2c2f3c;
+  color: #21232e;
   border-bottom-right-radius: 740px 280px; }
   .header-wrap {
     max-width: 1536px;
@@ -37,11 +44,6 @@ html {
     margin-bottom: 60px;
     white-space: pre-line; }
   .header_button {
-    padding: 8px 35px;
-    background-color: #699900;
-    border: none;
-    border-radius: 3px;
-    margin-right: 180px;
     margin-bottom: 180px; }
   .header a {
     font-size: 14px; }
@@ -62,5 +64,78 @@ html {
   .landing-logo span {
     display: block;
     font-size: 8px; }
+
+.section {
+  text-align: center;
+  padding-top: 40px; }
+  .section_text {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #21232e; }
+  .section_card_wrap {
+    width: 1113.6px;
+    margin: 0 auto; }
+  .section_card {
+    padding: 14px;
+    border-radius: 5px;
+    background-color: #21232e;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px; }
+    .section_card_img {
+      border-radius: 5px;
+      min-height: 250px;
+      width: auto; }
+    .section_card_right_container {
+      width: 480px;
+      padding-top: 60px;
+      margin: 0 auto;
+      color: white;
+      margin-bottom: 20px; }
+    .section_card_heading {
+      font-family: "Hind", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 40px; }
+    .section_card_text {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 12px;
+      text-align: justify;
+      margin-bottom: 30px; }
+  .section_link {
+    color: white;
+    font-size: 12px; }
+  .section_banner {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to right, #699900, #2e5cd3);
+    padding: 25px 0; }
+    .section_banner_heading {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #21232e;
+      margin-bottom: 16px; }
+    .section_banner_text {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 10px;
+      color: white;
+      text-align: left; }
+
+.footer {
+  background-color: #21232e;
+  max-width: 1920px;
+  margin: 0 auto; }
+  .footer-wrap {
+    width: 1536px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 /*# sourceMappingURL=style1.css.map */
