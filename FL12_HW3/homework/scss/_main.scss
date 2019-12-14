@@ -155,6 +155,7 @@ html {
     justify-content: space-around;
     background: linear-gradient(to right, $btn-bg-color, #2e5cd3);
     padding: 25px 0;
+    transform: translateY(50px);
 
     &_heading {
       font-family: $font1;
