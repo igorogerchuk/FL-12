@@ -11,38 +11,59 @@ html {
   padding: 0;
 }
 
-%link-style {
-  font-family: $font2;
+$fonts: (
+  "source-sans-pro": $source-sans-pro,
+  "hind": $hind,
+  "fresca": $fresca
+);
+
+@mixin link-style($size, $weight) {
+  font-family: map-get($fonts, "hind");
+  font-size: $size;
   color: $link-color;
-  font-weight: bold;
+  font-weight: $weight;
 }
 
-%button-style {
+@mixin button-style {
   padding: 8px 35px;
-  @extend %link-style;
+  font-family: map-get($fonts, "hind");
   background-color: $btn-bg-color;
+  color: $link-color;
+  font-weight: bold;
   border: none;
   border-radius: 3px;
-  margin-right: 180px;
+}
+
+@mixin block-centration($width) {
+  max-width: $width;
+  margin: 0 auto;
+}
+
+%small-text {
+  font-family: map-get($fonts, "source-sans-pro");
+  font-size: 10px;
+  color: $link-color;
+}
+
+body {
+  background-color: $bg-color;
 }
 
 .header {
-  background: no-repeat url(../img/m-h-day.jpg) center center;
+  background: no-repeat $header-bg-image center center;
   background-size: cover;
-  max-width: $width;
-  margin: 0 auto;
+  @include block-centration($width);
   color: $text-color;
   border-bottom-right-radius: 740px 280px;
 
   &-wrap {
-    max-width: $width * 0.8;
-    margin: 0 auto;
+    @include block-centration($width * 0.8);
   }
 
   &_heading {
     max-width: $width * 0.25;
     font-size: 48px;
-    font-family: $font1;
+    font-family: map-get($fonts, "source-sans-pro");
     font-weight: bold;
     line-height: 48px;
     margin-bottom: 60px;
@@ -51,19 +72,19 @@ html {
   &_text {
     max-width: $width * 0.35;
     font-size: 14px;
-    font-family: $font1;
+    font-family: map-get($fonts, "source-sans-pro");
     margin-bottom: 60px;
     white-space: pre-line;
   }
 
   &_button {
-    @extend %button-style;
+    @include button-style;
+    margin-right: 280px;
     margin-bottom: 180px;
   }
 
   a {
-    @extend %link-style;
-    font-size: 14px;
+    @include link-style(14px, bold);
   }
 }
 
@@ -72,6 +93,7 @@ html {
   align-items: center;
   text-align: center;
   padding-top: 20px;
+  color: $banner-logo-color;
   margin-bottom: 90px;
   img {
     width: 44px;
@@ -79,7 +101,7 @@ html {
   }
   p {
     font-size: 18px;
-    font-family: $font2;
+    font-family: map-get($fonts, "hind");
     font-weight: bold;
   }
   span {
@@ -93,7 +115,7 @@ html {
   padding-top: 40px;
 
   &_text {
-    font-family: $font1;
+    font-family: map-get($fonts, "source-sans-pro");
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 40px;
@@ -101,14 +123,13 @@ html {
   }
 
   &_card_wrap {
-    width: $width * 0.58;
-    margin: 0 auto;
+    @include block-centration($width * 0.58);
   }
 
   &_card {
     padding: 14px;
     border-radius: 5px;
-    background-color: $text-color;
+    background-color: $element-bg-color;
     display: flex;
     align-items: center;
     margin-bottom: 14px;
@@ -128,14 +149,14 @@ html {
     }
 
     &_heading {
-      font-family: $font2;
+      font-family: map-get($fonts, "hind");
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 40px;
     }
 
     &_text {
-      font-family: $font1;
+      font-family: map-get($fonts, "source-sans-pro");
       font-size: 12px;
       text-align: justify;
       margin-bottom: 30px;
@@ -143,22 +164,21 @@ html {
   }
 
   &_link {
-    color: $link-color;
-    font-size: 12px;
+    @include link-style(12px, normal);
   }
 
   &_banner {
-    width: 1200px;
-    margin: 0 auto;
+    @include block-centration($width * 0.625);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(to right, $btn-bg-color, #2e5cd3);
+    background: $banner-bg-gradient;
     padding: 25px 0;
+    border-radius: 5px;
     transform: translateY(50px);
 
     &_heading {
-      font-family: $font1;
+      font-family: map-get($fonts, "source-sans-pro");
       font-size: 20px;
       font-weight: bold;
       color: $text-color;
@@ -166,29 +186,40 @@ html {
     }
 
     &_text {
-      font-family: $font1;
-      font-size: 10px;
-      color: $link-color;
+      @extend %small-text;
       text-align: left;
     }
 
     &_button {
-      @extend %button-style;
+      @include button-style;
     }
-    margin-bottom: -50px;
   }
 }
 
 .footer {
-  background-color: $text-color;
+  background-color: $element-bg-color;
   max-width: $width;
   margin: 0 auto;
+  padding: 100px 0 50px 0;
 
   &-wrap {
-    width: $width * 0.8;
-    margin: 0 auto;
+    @include block-centration($width * 0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &_logo {
+    margin-bottom: 0;
+    color: $link-color;
+  }
+
+  &_text,
+  &-cr {
+    @extend %small-text;
+  }
+
+  &_text {
+    max-width: 300px;
   }
 }

@@ -8,17 +8,13 @@ html {
   margin: 0;
   padding: 0; }
 
-.header_button, .section_banner_button, .header a {
-  font-family: "Hind", sans-serif;
-  color: white;
-  font-weight: bold; }
+.section_banner_text, .footer_text, .footer-cr {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 10px;
+  color: white; }
 
-.header_button, .section_banner_button {
-  padding: 8px 35px;
-  background-color: #699900;
-  border: none;
-  border-radius: 3px;
-  margin-right: 180px; }
+body {
+  background-color: white; }
 
 .header {
   background: no-repeat url(../img/m-h-day.jpg) center center;
@@ -44,15 +40,27 @@ html {
     margin-bottom: 60px;
     white-space: pre-line; }
   .header_button {
+    padding: 8px 35px;
+    font-family: "Hind", sans-serif;
+    background-color: #699900;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    margin-right: 280px;
     margin-bottom: 180px; }
   .header a {
-    font-size: 14px; }
+    font-family: "Hind", sans-serif;
+    font-size: 14px;
+    color: white;
+    font-weight: bold; }
 
 .landing-logo {
   display: flex;
   align-items: center;
   text-align: center;
   padding-top: 20px;
+  color: #21232e;
   margin-bottom: 90px; }
   .landing-logo img {
     width: 44px;
@@ -75,7 +83,7 @@ html {
     margin-bottom: 40px;
     color: #21232e; }
   .section_card_wrap {
-    width: 1113.6px;
+    max-width: 1113.6px;
     margin: 0 auto; }
   .section_card {
     padding: 14px;
@@ -105,41 +113,52 @@ html {
       text-align: justify;
       margin-bottom: 30px; }
   .section_link {
+    font-family: "Hind", sans-serif;
+    font-size: 12px;
     color: white;
-    font-size: 12px; }
+    font-weight: normal; }
   .section_banner {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background: linear-gradient(to right, #699900, #2e5cd3);
     padding: 25px 0;
-    margin-bottom: -50px;
-    z-index: 1; }
+    border-radius: 5px;
+    transform: translateY(50px); }
     .section_banner_heading {
       font-family: "Source Sans Pro", sans-serif;
       font-size: 20px;
       font-weight: bold;
       color: #21232e;
-      margin-bottom: 16px;
-      z-index: 1; }
+      margin-bottom: 16px; }
     .section_banner_text {
-      font-family: "Source Sans Pro", sans-serif;
-      font-size: 10px;
+      text-align: left; }
+    .section_banner_button {
+      padding: 8px 35px;
+      font-family: "Hind", sans-serif;
+      background-color: #699900;
       color: white;
-      text-align: left;
-      z-index: 1; }
+      font-weight: bold;
+      border: none;
+      border-radius: 3px; }
 
 .footer {
   background-color: #21232e;
   max-width: 1920px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 100px 0 50px 0; }
   .footer-wrap {
-    width: 1536px;
+    max-width: 1536px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center; }
+  .footer_logo {
+    margin-bottom: 0;
+    color: white; }
+  .footer_text {
+    max-width: 300px; }
 
 /*# sourceMappingURL=style1.css.map */

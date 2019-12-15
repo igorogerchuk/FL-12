@@ -1,7 +1,15 @@
+$light-color: white;
+$dark-color: #21232e;
+
 $width: 1920px;
-$font1: "Source Sans Pro", sans-serif;
-$font2: "Hind", sans-serif;
-$font3: "Fresca", sans-serif;
-$text-color: #21232e;
-$link-color: white;
+$source-sans-pro: "Source Sans Pro", sans-serif;
+$hind: "Hind", sans-serif;
+$fresca: "Fresca", sans-serif;
+$banner-logo-color: $dark-color;
+$text-color: $dark-color;
+$link-color: $light-color;
+$element-bg-color: $dark-color;
+$bg-color: $light-color;
 $btn-bg-color: #699900;
+$header-bg-image: url(../img/m-h-day.jpg);
+$banner-bg-gradient: linear-gradient(to right, $btn-bg-color, #2e5cd3);
