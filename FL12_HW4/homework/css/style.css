@@ -32,6 +32,7 @@ body {
 .header--container {
   max-width: 1140px;
   height: 10vh;
+  min-height: 90px;
   margin: auto auto;
   display: flex;
   justify-content: space-between;
