@@ -12,21 +12,109 @@
 
 body {
   font-family: roboto;
+  background-color: var(--bg-color--dark);
 }
 .post-1 {
-	background: #9d27b0;
+  background: #9d27b0;
 }
 .post-2 {
-	background: #9bb800;
+  background: #9bb800;
 }
 .post-3 {
-	background: #ed5120;
+  background: #ed5120;
 }
 .post-4 {
-	background: #9d27b0;
+  background: #9d27b0;
 }
 .post-5 {
-	background: #2d95bb;
+  background: #2d95bb;
 }
 
-/* Your styles go here */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0 7px;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 25px 0 50px 0;
+  }
+  .nav--list {
+    display: none;
+  }
+  .nav--icon {
+    margin-bottom: 60px;
+  }
+  .logo--link {
+    font-weight: 200;
+  }
+  .logo--link > span {
+    color: #d12767;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: grid;
+}
+
+.header {
+  background-color: var(--bg-color--header);
+}
+
+.nav--icon {
+  width: 30px;
+}
+
+.nav--icon div {
+  background-color: var(--link);
+}
+
+.line1 {
+  height: 4px;
+  margin-bottom: 6px;
+}
+
+.line2 {
+  height: 3px;
+  margin-bottom: 6px;
+}
+
+.line3 {
+  height: 2px;
+}
+
+.logo--link,
+.nav--link {
+  color: var(--link);
+}
