@@ -58,7 +58,7 @@ img {
 
 @media screen and (max-width: 480px) {
   body {
-    padding: 0 7px;
+    padding: 0 7px 5px 7px;
   }
   .wrapper {
     grid-template-columns: 1fr;
@@ -68,6 +68,7 @@ img {
     flex-direction: column-reverse;
     align-items: center;
     padding: 25px 0 50px 0;
+    margin-bottom: 20px;
   }
   .nav--list {
     display: none;
@@ -75,11 +76,26 @@ img {
   .nav--icon {
     margin-bottom: 60px;
   }
-  .logo--link {
-    font-weight: 200;
+  .banner {
+    padding: 90px 33px 40px 33px;
+    margin-bottom: 15px;
   }
-  .logo--link > span {
-    color: #d12767;
+
+  .posts {
+    margin-bottom: 15px;
+  }
+
+  .news--item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .news {
+    margin-bottom: 35px;
+  }
+
+  .footer {
+    padding: 25px;
+    text-align: center;
   }
 }
 
@@ -116,5 +132,100 @@ img {
 
 .logo--link,
 .nav--link {
+  color: var(--link);
+}
+
+.logo--link {
+  font-weight: 200;
+}
+
+.logo--link > span {
+  color: #d12767;
+}
+
+.banner {
+  background: no-repeat url(../img/post0.jpg) top center;
+  background-size: cover;
+}
+
+.banner--title,
+.post--title {
+  font-weight: 250;
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 25px;
+  color: var(--link);
+}
+
+.banner--description,
+.post--description {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--link);
+  opacity: 0.7;
+}
+
+.post--text {
+  padding: 33px;
+  position: relative;
+}
+
+.post--date {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+  color: var(--link);
+  opacity: 0.3;
+}
+
+.post--date > p {
+  font-size: 40px;
+}
+
+.news--text {
+  padding: 30px;
+  background-color: var(--link);
+}
+
+.news--title {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 15px;
+  color: var(--bg-color--dark);
+}
+
+.news--description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--bg-color--dark);
+  opacity: 0.7;
+}
+
+.footer {
+  background-color: var(--bg-footer-color);
+}
+
+.copyright,
+.author {
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--link);
+  opacity: 0.3;
+}
+
+.author {
+  font-style: normal;
+}
+.author--link {
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 1.5;
   color: var(--link);
 }
