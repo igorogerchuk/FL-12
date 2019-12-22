@@ -2,17 +2,10 @@
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
-html {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #024161;
-  --link: #fff;
-  --link--hover: #1f52a4;
-  --bg-footer-color: #024161;
-}
 
 body {
   font-family: roboto;
-  background-color: var(--bg-color--dark);
+  background-color: #0b192f;
 }
 .post-1 {
   background: #9d27b0;
@@ -188,7 +181,7 @@ img {
     display: flex;
   }
   .nav--link:hover {
-    background-color: var(--link--hover);
+    background-color: #1f52a4;
   }
   .nav--link {
     display: block;
@@ -248,7 +241,7 @@ img {
 }
 
 .header {
-  background-color: var(--bg-color--header);
+  background-color: #024161;
 }
 
 .nav--icon {
@@ -257,7 +250,7 @@ img {
 }
 
 .nav--icon div {
-  background-color: var(--link);
+  background-color: #fff;
 }
 
 .line1 {
@@ -277,7 +270,7 @@ img {
 
 .logo--link,
 .nav--link {
-  color: var(--link);
+  color: #fff;
 }
 
 .logo--link {
@@ -303,7 +296,7 @@ img {
   font-size: 40px;
   line-height: 1;
   margin-bottom: 25px;
-  color: var(--link);
+  color: #fff;
 }
 
 .banner--description,
@@ -311,7 +304,7 @@ img {
   font-weight: 300;
   font-size: 12px;
   line-height: 1.5;
-  color: var(--link);
+  color: #fff;
   opacity: 0.7;
 }
 
@@ -325,7 +318,7 @@ img {
   text-align: center;
   font-size: 20px;
   font-weight: 100;
-  color: var(--link);
+  color: #fff;
   opacity: 0.3;
 }
 
@@ -334,7 +327,7 @@ img {
 }
 
 .news--text {
-  background-color: var(--link);
+  background-color: #fff;
 }
 
 .news--title {
@@ -342,19 +335,19 @@ img {
   font-size: 22px;
   line-height: 1;
   margin-bottom: 15px;
-  color: var(--bg-color--dark);
+  color: #0b192f;
 }
 
 .news--description {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
-  color: var(--bg-color--dark);
+  color: #0b192f;
   opacity: 0.7;
 }
 
 .footer {
-  background-color: var(--bg-footer-color);
+  background-color: #024161;
 }
 
 .copyright,
@@ -362,7 +355,7 @@ img {
   font-weight: 200;
   font-size: 12px;
   line-height: 1.5;
-  color: var(--link);
+  color: #fff;
   opacity: 0.3;
 }
 
@@ -373,5 +366,5 @@ img {
   font-weight: 200;
   font-size: 12px;
   line-height: 1.5;
-  color: var(--link);
+  color: #fff;
 }
