@@ -2,7 +2,7 @@
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
-:root {
+html {
   --bg-color--dark: #0b192f;
   --bg-color--header: #024161;
   --link: #fff;
@@ -299,7 +299,7 @@ img {
 
 .banner--title,
 .post--title {
-  font-weight: 250;
+  font-weight: 200;
   font-size: 40px;
   line-height: 1;
   margin-bottom: 25px;
