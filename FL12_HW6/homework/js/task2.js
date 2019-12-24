@@ -16,6 +16,7 @@ if (a.trim() === '' || b.trim() === '' || c.trim() === '') {
         } else {
             if (a + b < c || a + c < c || b + c < c) {
                 alert('Triangle doesn’t exist');
+                console.log('Triangle doesn’t exist');
             } else {
                 if (a === b && b === c) {
                     console.log('Equilateral triangle');
