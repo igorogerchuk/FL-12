@@ -1,8 +1,8 @@
-let a = (prompt('Enter a side (only numbers > 0)'));
-let b = (prompt('Enter b side (only numbers > 0)'));
-let c = (prompt('Enter c side (only numbers > 0)'));
+let a = prompt('Enter a side (only numbers > 0)');
+let b = prompt('Enter b side (only numbers > 0)');
+let c = prompt('Enter c side (only numbers > 0)');
 
-if (a.trim() === "" || b.trim() === "" || c.trim() === "") {
+if (a.trim() === '' || b.trim() === '' || c.trim() === '') {
     alert('input values should be ONLY numbers');
 } else {
     a = Number(a);
