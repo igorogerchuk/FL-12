@@ -1,12 +1,12 @@
 const convert = (...args) => {
     const result = [];
     for (let i = 0; i < args.length; i++) {
-        result[i] = typeof (args[i]) === "string" ? +args[i] : `${args[i]}`;
+        result[i] = typeof args[i] === 'string' ? +args[i] : `${args[i]}`;
     }
     return result;
 }
 
-console.log(convert('1', 2, 3, '4'));
+// console.log(convert('1', 2, 3, '4'));
 
 const executeforEach = (array, callback) => {
     for (let i = 0; i < array.length; i++) {
@@ -14,7 +14,9 @@ const executeforEach = (array, callback) => {
     }
 }
 
-executeforEach([1, 2, 3], function (el) { console.log(el * 2) })
+// executeforEach([1, 2, 3], function (el) {
+//     console.log(el * 2)
+// })
 
 const mapArray = (array, callback) => {
     const result = [...array];
@@ -23,19 +25,21 @@ const mapArray = (array, callback) => {
     return result;
 }
 
-console.log(mapArray([2, '5', 8], function (el) { return el + 3 }));
+// console.log(mapArray([2, '5', 8], function (el) { return el + 3 }));
 
 const filterArray = (array, callback) => {
     const filtersArray = [...array];
     const result = [];
     executeforEach(filtersArray, callback);
     for (let i = 0; i < array.length; i++) {
-        if (filtersArray[i]) { result.push(array[i]) }
+        if (filtersArray[i]) {
+            result.push(array[i])
+        }
     }
     return result;
 }
 
-console.log(filterArray([2, 5, 8], function (el) { return el % 2 === 0 }));
+// console.log(filterArray([2, 5, 8], function (el) { return el % 2 === 0 }));
 
 const flipOver = (string) => {
     let result = '';
@@ -45,7 +49,7 @@ const flipOver = (string) => {
     return result;
 }
 
-console.log(flipOver('hey world'));
+// console.log(flipOver('hey world'));
 
 const makeListFromRange = ([startNumber, endNumber]) => {
     let result = [];
@@ -55,7 +59,7 @@ const makeListFromRange = ([startNumber, endNumber]) => {
     return result;
 }
 
-console.log(makeListFromRange([2, 7]));
+// console.log(makeListFromRange([2, 7]));
 
 const getArrayOfKeys = (array, key) => {
     const result = [...array];
@@ -68,10 +72,10 @@ const actors = [
     { name: 'lee', age: 28 }
 ];
 
-console.log(getArrayOfKeys(actors, 'name'));
+// console.log(getArrayOfKeys(actors, 'name'));
 
 const substitute = (array) => {
     return mapArray(array, (number) => number < 30 ? '*' : number);
 }
 
-console.log(substitute([58, 14, 48, 2, 31, 29]));
+// console.log(substitute([58, 14, 48, 2, 31, 29]));
