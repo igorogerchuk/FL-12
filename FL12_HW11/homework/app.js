@@ -37,19 +37,21 @@ const structure = [
 
 const rootNode = document.getElementById('root');
 
-const onclick = e => {
-  if (e.target.tagName === "UL") {
+const onclickHandler = e => {
+  if (e.target.tagName === 'UL') {
     for (const element of e.target.children) {
-      if (element.tagName !== "I") {
+      if (element.tagName !== 'I') {
         element.classList.toggle('hidden');
-      } else if (element.innerText === "folder") {
-        (element.innerText = "folder_open")
-      } else { element.innerText = "folder" }
+      } else if (element.innerText === 'folder') {
+        element.innerText = 'folder_open'
+      } else {
+        element.innerText = 'folder'
+      }
     }
   }
 }
 
-rootNode.addEventListener("click", onclick);
+rootNode.addEventListener('click', onclickHandler);
 
 function createFileTree(structureVariable, parent = rootNode) {
   let element = structureVariable.shift();
@@ -68,7 +70,7 @@ function createFileTree(structureVariable, parent = rootNode) {
 
   }
 
-  node.insertAdjacentText("beforeend", element.title);
+  node.insertAdjacentText('beforeend', element.title);
   parent.appendChild(node);
 
 
