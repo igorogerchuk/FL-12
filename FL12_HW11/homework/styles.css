@@ -16,4 +16,13 @@
 
 ul {
     list-style: none;
+    cursor: pointer;
+}
+
+ul, li {
+    padding-left: 36px;
+}
+
+.hidden {
+    display: none;
 }
