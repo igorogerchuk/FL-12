@@ -73,8 +73,6 @@ function createFileTree(structureVariable, parent = rootNode) {
   node.insertAdjacentText('beforeend', element.title);
   parent.appendChild(node);
 
-
-
   if (element.folder && element.children) {
     createFileTree(element.children, node);
   }
@@ -82,8 +80,6 @@ function createFileTree(structureVariable, parent = rootNode) {
     createFileTree(structureVariable, parent);
   }
 }
-
-
 
 createFileTree(structure);
 
