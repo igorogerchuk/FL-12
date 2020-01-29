@@ -7,15 +7,24 @@ const mainDiv = document.createElement('div');
 mainDiv.classList.add('hidden');
 const addButton = document.createElement('button');
 addButton.textContent = 'Add set';
-addButton.addEventListener('click', onAddHandler);
-function onAddHandler() {
-    location.hash = '/add';
-}
+addButton.addEventListener('click', () => location.hash = '/add');
 mainDiv.appendChild(addButton);
 
 //Add new set wrapper
 const addDiv = document.createElement('div');
 addDiv.classList.add('hidden');
+const inputName = document.createElement('input');
+inputName.setAttribute('type', 'text');
+inputName.setAttribute('name', 'Name');
+const saveButton = document.createElement('button');
+saveButton.textContent = 'Save changes';
+const cancelButton = document.createElement('button');
+cancelButton.textContent = 'Cancel';
+cancelButton.addEventListener('click', () => location.hash = '')
+
+addDiv.appendChild(inputName);
+addDiv.appendChild(saveButton);
+addDiv.appendChild(cancelButton);
 
 //Modify set wrapper
 const modifyDiv = document.createElement('div');
@@ -25,14 +34,13 @@ root.appendChild(mainDiv);
 root.appendChild(addDiv);
 root.appendChild(modifyDiv);
 
-
-
 routesHandler();
 
 window.addEventListener('hashchange', routesHandler);
 
+
 function routesHandler() {
-    if (location.hash.substring(1) === '/') {
+    if (location.hash.substring(1) === '') {
         title.textContent = 'Main page';
         mainDiv.classList.remove('hidden');
         addDiv.classList.add('hidden');
