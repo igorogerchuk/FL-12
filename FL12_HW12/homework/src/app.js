@@ -10,14 +10,7 @@ mainDiv.classList.add('hidden');
 const mainTitle = createTitle('Main page');
 const addButton = createButton('Add set', () => location.hash = '/add');
 const setsList = document.createElement('ul');
-sets.map(set => {
-    const setItem = document.createElement('li');
-    setItem.textContent = set.name;
-    const editButton = createButton('Edit', () => location.hash = `/modify/${set.id}`);
-    const removeButton = createButton('Remove', () => setItem.remove());
-
-    appendChildren(setsList, setItem, editButton, removeButton);
-})
+appendItemstoSetsList();
 appendChildren(mainDiv, mainTitle, addButton, setsList);
 
 
@@ -50,6 +43,7 @@ function saveButtonHandler() {
     const set = { id: idCount, isStudied: false, name: setName, terms: terms };
     idCount++;
     sets.push(set);
+    appendItemstoSetsList();
     location.hash = '';
 }
 const cancelButton = createButton('Cancel', () => location.hash = '');
@@ -111,4 +105,20 @@ function appendChildren(parent, ...children) {
     for (const child of children) {
         parent.appendChild(child);
     }
+}
+
+function appendItemstoSetsList() {
+    sets.map(set => {
+        const setItem = document.createElement('li');
+        setItem.textContent = set.name;
+        const editButton = createButton('Edit', () => location.hash = `/modify/${set.id}`);
+        const removeButton = createButton('Remove', () => setItem.remove());
+
+        appendChildren(setItem, editButton, removeButton);
+        setsList.appendChild(setItem);
+    })
+}
+
+function moveSets(oldIndex, newIndex) {
+    sets.splice(newIndex, 0, sets.splice(oldIndex, 1)[0]);
 }
