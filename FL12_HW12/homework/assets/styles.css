@@ -1,3 +1,10 @@
-.hidden {
-    display: none;
+.sets__item {
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: red;
+}
+
+.studied {
+    color: green;
 }
