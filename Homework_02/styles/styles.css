@@ -298,8 +298,23 @@ a:focus {
 }
 
 .main-home {
-  background: url('../img/home-bg.jpg') no-repeat;
+  background: url('../img/home-bg_768.jpg') no-repeat;
   height: 100vh;
+} 
+@media (min-width: 769px) {
+  .main-home {
+    background-image: url('../img/home-bg_992.jpg');
+  }
+}
+@media (min-width: 993px) {
+  .main-home {
+    background-image: url('../img/home-bg_1200.jpg');
+  }
+}
+@media (min-width: 1200px) {
+  .main-home {
+    background-image: url('../img/home-bg.jpg');
+  }
 }
 
 .main-about {
